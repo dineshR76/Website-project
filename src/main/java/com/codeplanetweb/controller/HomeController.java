@@ -86,9 +86,13 @@ public class HomeController
 		PreparedStatement stmt = con.prepareStatement(query1);
 		stmt.setString(1,email);
 		ResultSet rs = stmt.executeQuery();
-		if (rs.next()) {
+		if (rs.next())
+		{
 			req.setAttribute("test", "You are already signedup");
-		} else {
+			return "dup";
+		}
+		else 
+		{
 		  String query2 = "insert into admission(fname,lname,mobile,email,gender,marks,course) values(?,?,?,?,?,?,?)";
 		  PreparedStatement stmt1 = con.prepareStatement(query2);
 		  stmt1.setString(1,fname);
@@ -127,7 +131,6 @@ public class HomeController
 				msg.setText(body);
 				Transport.send(msg);
 			} catch (MessagingException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		  }
