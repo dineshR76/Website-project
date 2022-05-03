@@ -29,7 +29,7 @@
                     <li><a href="courses">Courses</a></li>
                     <li><a href="examcell">Exam Cell</a></li>
                     <li><a href="campus">Campus</a></li>
-                    <li><a href="">Contact us</a></li>
+                    <li><a href="stud_resc">Student and Admin</a></li>
                 </ul>
             </nav>
             </div>
@@ -41,12 +41,12 @@
     <!-- Full-width images with number and caption text -->
     <div class="mySlides fade">
       <div class="numbertext">1 / 3</div>
-      <img src="img1.webp" style="width:100%">
+      <img src="images/img1.webp" style="width:100%">
     </div>
   
     <div class="mySlides fade">
       <div class="numbertext">2 / 3</div>
-      <img src="img2.jpg" style="width:100%">
+      <img src="images/img2.jpg" style="width:100%">
     </div>
   
     <div class="mySlides fade">
@@ -83,7 +83,7 @@
 
 <div class="placement">
   <h2>Placement process</h2>
-  <div clqass="list">
+  <div class="list">
   <p>Process Driven Placement System - Over time our placement process has been refined to make recruitment as simple as possible for students and companies alike. The life cycle of the placement process is:</p>
   <ul>
     <li>We contact companies about 2 months ahead of the placement schedule.</li>
@@ -148,34 +148,54 @@
     </body>
 </html>
 <script>
-    let slideIndex = 1;
-showSlides(slideIndex);
+//     let slideIndex = 1;
+// showSlides(slideIndex);
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+// // Next/previous controls
+// function plusSlides(n) {
+//   showSlides(slideIndex += n);
+// }
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+// // Thumbnail image controls
+// function currentSlide(n) {
+//   showSlides(slideIndex = n);
+// }
 
-function showSlides(n) {
+// function showSlides(n) {
+//   let i;
+//   let slides = document.getElementsByClassName("mySlides");
+//   let dots = document.getElementsByClassName("dot");
+//   if (n > slides.length) {slideIndex = 1}
+//   if (n < 1) {slideIndex = slides.length}
+//   for (i = 0; i < slides.length; i++) {
+//     slides[i].style.display = "none";
+//   }
+//   for (i = 0; i < dots.length; i++) {
+//     dots[i].className = dots[i].className.replace(" active", "");
+//   }
+//   slides[slideIndex-1].style.display = "block";
+//   dots[slideIndex-1].className += " active";
+// } 
+
+
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
   let i;
   let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
   slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-} 
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+
+
+
+
 </script>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
@@ -516,9 +536,15 @@ ul{
 .placement
 {
   margin-left: 5px;
- background: #e2e7e9;
  width: 75%;
  padding: 2rem 3rem;
+ background-image: url("images/giphy.gif");
+ background-repeat: no-repeat;
+ background-size: cover;
+ color: #E0FFFF;
+ margin-bottom: 5%;
+ background-position: center;
+
 }
   
   

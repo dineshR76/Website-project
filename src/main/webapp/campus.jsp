@@ -31,7 +31,7 @@
   </div>
   
   <div class="Display">
-    <img src="images/comp.jpg" alt="Norther Lights" style="width:100%">
+    <img src="images/clab.jpg" alt="Norther Lights" style="width:100%">
     <div class="text">
     <p>Cmputer Lab</p>
     </div>

@@ -10,3 +10,9 @@
 <h1>Successfully registered</h1>
 </body>
 </html>
+<style>
+h1
+{
+text-align:center;
+}
+</style>

@@ -7,12 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>You have already registered</h1>
+<h1>Data inserted successfully</h1>
 </body>
 </html>
-<style>
-h1
-{
-text-align:center;
-}
-</style>
