@@ -139,7 +139,7 @@ public class HomeController
 			p.put("mail.smtp.port", "465");
 			p.put("mail.smtp.ssl.enable", "true");
 			p.put("mail.smtp.auth", "true");
-			MailAuthenticator m = new MailAuthenticator("rdinesh709@gmail.com", "boopathy12");
+			MailAuthenticator m = new MailAuthenticator("rdinesh709@gmail.com", "password");
 			
 			Session session = Session.getInstance(p, m);
 			session.setDebug(true);
